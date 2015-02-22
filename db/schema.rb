@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150222130343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "appartments", force: :cascade do |t|
+  create_table "apartments", force: :cascade do |t|
     t.string   "eid",        null: false
     t.string   "rent_type",  null: false
     t.integer  "price",      null: false
@@ -28,6 +28,6 @@ ActiveRecord::Schema.define(version: 20150222130343) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "appartments", ["eid"], name: "index_appartments_on_eid", unique: true, using: :btree
+  add_index "apartments", ["eid"], name: "index_apartments_on_eid", unique: true, using: :btree
 
 end

@@ -1,4 +1,4 @@
-class Appartment < ActiveRecord::Base
+class Apartment < ActiveRecord::Base
 
   validates :eid, :price, :rent_type, presence: true
 

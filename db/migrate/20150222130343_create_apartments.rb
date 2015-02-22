@@ -1,6 +1,6 @@
-class CreateAppartments < ActiveRecord::Migration
+class CreateApartments < ActiveRecord::Migration
   def change
-    create_table :appartments do |t|
+    create_table :apartments do |t|
       t.string :eid, null: false
       t.string :rent_type, null: false
       t.integer :price, null: false
@@ -12,6 +12,6 @@ class CreateAppartments < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_index :appartments, :eid, unique: true
+    add_index :apartments, :eid, unique: true
   end
 end

@@ -2,7 +2,15 @@ class ROnlinerFetchJob < ActiveJob::Base
   queue_as :default
 
   def perform(*args)
-    appartments = Providers::Onliner::Appartment.fetch(onliner_params)
+    apartments = Providers::Onliner::Apartment.fetch(onliner_params)
+    apartments.each do |onliner_params|
+      params = Providers::Onliner::ApartmentMapper.new(onliner_params).map_to_model_params
+
+      unless Apartment.exists?(params)
+        model = Apartment.where(eid: params[:eid]).first_or_initialize
+        model.update_attributes(params)
+      end
+    end
   end
 
   def onliner_params

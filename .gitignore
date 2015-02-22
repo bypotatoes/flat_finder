@@ -19,3 +19,6 @@
 # Ignore npm-log
 npm-debug.log
 
+# Ignore configs
+config/*.yml
+

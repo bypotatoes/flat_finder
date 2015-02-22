@@ -20,5 +20,4 @@
 npm-debug.log
 
 # Ignore configs
-config/*.yml
-
+/config/*.yml

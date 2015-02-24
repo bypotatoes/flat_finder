@@ -9,5 +9,6 @@ gem 'httparty'
 group :development, :test do
   gem 'thin'
   gem 'pry-rails'
+  gem 'letter_opener'
 end
 

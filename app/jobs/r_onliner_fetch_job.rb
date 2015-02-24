@@ -9,6 +9,8 @@ class ROnlinerFetchJob < ActiveJob::Base
       unless Apartment.exists?(params)
         model = Apartment.where(eid: params[:eid]).first_or_initialize
         model.update_attributes(params)
+
+        ApartmentMailer.delay.new_apartment_notification(model)
       end
     end
   end

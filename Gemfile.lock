@@ -147,6 +147,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   letter_opener
+  nokogiri
   pg
   pry-rails
   rails (= 4.2.0)

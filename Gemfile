@@ -4,6 +4,7 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
 gem 'sidekiq'
+gem 'nokogiri'
 gem 'httparty'
 
 group :development, :test do
